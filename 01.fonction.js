@@ -26,7 +26,7 @@ var resultat3 = multiplier(nombre1, nombre2);
 console.log('resultat2 = ',resultat2);
 console.log('resultat3 = ',resultat3);
 
-afficherOperation = function (nomOperation, operation, nb1, nb2){
+var afficherOperation = function (nomOperation, operation, nb1, nb2){
     var result = operation(nb1,nb2);
     console.log(nomOperation,'(',nb1,' , ',nb2,') = ',result);
 }

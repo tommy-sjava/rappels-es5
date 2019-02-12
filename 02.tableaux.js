@@ -17,20 +17,16 @@ var result2 = villes.some(function (val) {
 
 lg('auMoinsUneVilleAvecUnTiret =', result2);
 
-var villesSansTiretSansEspace = [];
-villes.filter(function (val) {
-    if(!(val.includes('-')) && !(val.includes(' '))){
-        villesSansTiretSansEspace.push(val);
-    }
+var villesSansTiretSansEspace = villes.filter(function (val) {
+    return(!(val.includes('-')) && !(val.includes(' ')));
 });
 
 lg(villesSansTiretSansEspace);
 
-var villesMajusculeSeTerminantParS = [];
-villes.filter(function (val) {
-    if(val[val.length - 1] == 's'){
-        villesMajusculeSeTerminantParS.push(val.toUpperCase());
-    }
-})
+var villesMajusculeSeTerminantParS = villes.filter(function (val) {
+    return(val[val.length - 1] == 's')
+}).map(function (val){
+    return val.toUpperCase();
+});
 
 lg(villesMajusculeSeTerminantParS);
